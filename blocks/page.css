@@ -1,0 +1,9 @@
+.page {
+  background-color: #000;
+  width: 100%;
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  /* margin: auto; */
+  min-height: 100vh;
+}
