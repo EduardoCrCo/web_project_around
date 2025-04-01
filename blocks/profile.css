@@ -1,5 +1,4 @@
 .profile {
-  border: 1px solid darkslategrey;
   max-width: 880px;
   margin: 40px auto 0;
   display: flex;
@@ -46,9 +45,20 @@
 }
 
 .profile-info__edit-button {
+  background-color: #000;
+  margin-left: 18px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profile-info__edit-button-image {
   width: 24px;
   height: 24px;
-  margin-left: 18px;
+}
+
+.profile-info__edit-button-image:hover {
+  opacity: 50%;
 }
 
 .profile-info__explorer {
@@ -57,10 +67,51 @@
   margin: 0;
 }
 
-.add-button {
+.profile-info__add-button {
+  background-color: #000;
   max-width: 150px;
   max-height: 50px;
   position: absolute;
   right: 0;
   top: 35px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profile-info__add-button-image {
+  max-width: 150px;
+  max-height: 50px;
+  /* position: absolute;
+  right: 0;
+  top: 35px; */
+}
+
+.profile-info__add-button-image:hover {
+  opacity: 50%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .profile {
+    max-width: 282px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-start; */
+    align-items: center;
+    position: relative;
+  }
+
+  .profile-info__add-button {
+    background-color: #000;
+    max-width: 150px;
+    max-height: 50px;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
 }
