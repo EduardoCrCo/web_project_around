@@ -17,5 +17,25 @@
   font-size: 18px;
   line-height: 1;
   color: #545454;
-  /* padding-bottom: 60px; */
+}
+
+@media screen and (min-width: 641px) and (max-width: 920px) {
+  .footer-footer {
+    max-width: 700px;
+    display: flex;
+    margin-top: 67px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer-footer {
+    max-width: 282px;
+    display: flex;
+    margin-top: 67px;
+  }
+
+  .footer-footer__copyright {
+    font-size: 14px;
+    line-height: 1;
+  }
 }

@@ -3,15 +3,38 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* margin: 45px auto 0; */
   margin: 0 auto;
-  padding-top: 45px;
 }
 
 .header__image {
+  padding-top: 45px;
   width: 173px;
 }
 
 .header__image-line {
-  margin-top: 41px;
+  margin: 0;
+  padding-top: 41px;
+}
+
+@media screen and (min-width: 641px) and (max-width: 920px) {
+  .header {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    max-width: 282px;
+    margin: 0 auto;
+  }
+
+  .header__image {
+    width: 126px;
+  }
+
+  .header__image-line {
+    margin: 0;
+    padding-top: 32px;
+  }
 }

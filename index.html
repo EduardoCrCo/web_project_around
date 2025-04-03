@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="shortcut icon" href="./images/favicon.svg" />
   </head>
-  <body>
+  <body class="body">
     <div class="page">
       <header class="header">
         <img
@@ -22,148 +22,164 @@
       </header>
 
       <main class="content">
-        <section class="profile">
-          <div class="profile-avatar">
+        <section class="content__profile">
+          <div class="content__profile-avatar">
             <img
               src="./images/dji_author.jpg"
               alt="imagen del perfil"
-              class="profile-avatar__image"
+              class="content__profile-avatar-image"
             />
           </div>
-          <div class="profile-info">
-            <h2 class="profile-info__name">
+          <div class="content__profile-info">
+            <p class="content__profile-info-name">
               Eduardo Crux
-              <button class="profile-info__edit-button" type="button">
+              <button class="content__profile-info-edit-button">
                 <img
                   src="./images/edit-button.svg"
-                  alt="boton editar perfil"
-                  class="profile-info__edit-button-image"
+                  alt="boton de editar"
+                  class="content__profile-info-edit-button-image"
                 />
               </button>
-            </h2>
-            <p class="profile-info__explorer">Explorador</p>
+            </p>
+            <p class="content__profile-info-explorer">Explorador</p>
           </div>
-          <button class="profile-info__add-button" type="button">
-            <img
-              src="./images/add-button.svg"
-              class="profile-info__add-button-image"
-              alt="boton agregar"
-            />
-          </button>
+          <button class="content__profile-button-add" type="button">🞣</button>
         </section>
 
         <section class="elements">
-          <ul class="cards">
-            <li class="card-content">
+          <div class="grid">
+            <div class="grid-card">
               <img
-                class="card-content__image"
+                class="grid-card__image"
                 src="./images/cecut-air.jpg"
                 alt="centro cultural Tijuana"
               />
-              <div class="card-content__paragraph-and-image">
-                <p class="card-content__paragraph">Centro Cultural Tijuana</p>
-                <button class="card-content__button-vector-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="card-content__vector-like-image"
-                  />
-                </button>
-              </div>
-            </li>
-
-            <li class="card-content">
-              <img
-                class="card-content__image"
-                src="./images/rosarito-BC.PNG"
-                alt="centro cultural Tijuana"
-              />
-              <div class="card-content__paragraph-and-image">
-                <p class="card-content__paragraph">Playas de Rosarito B. C.</p>
-                <button class="card-content__button-vector-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="card-content__vector-like-image"
-                  />
-                </button>
-              </div>
-            </li>
-
-            <li class="card-content">
-              <img
-                class="card-content__image"
-                src="./images/la-rumorosa.JPG"
-                alt="centro cultural Tijuana"
-              />
-              <div class="card-content__paragraph-and-image">
-                <p class="card-content__paragraph">La Rumorosa B.C</p>
-                <button class="card-content__button-vector-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="card-content__vector-like-image"
-                  />
-                </button>
-              </div>
-            </li>
-
-            <li class="card-content">
-              <img
-                class="card-content__image"
-                src="./images/la-bufadora.JPG"
-                alt="centro cultural Tijuana"
-              />
-              <div class="card-content__paragraph-and-image">
-                <p class="card-content__paragraph">
-                  La Bufadora Ensenada B. C.
+              <div class="grid-card__paragraph-and-image">
+                <p
+                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
+                >
+                  Centro Cultural Tijuana
                 </p>
-                <button class="card-content__button-vector-like">
+                <button class="grid-card__button-like">
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="card-content__vector-like-image"
+                    class="grid-card__like-image"
                   />
                 </button>
               </div>
-            </li>
+            </div>
 
-            <li class="card-content">
+            <div class="grid-card">
               <img
-                class="card-content__image"
+                class="grid-card__image"
+                src="./images/muelle-rosarito.jpg"
+                alt="Imagen playas de Rosarito"
+              />
+              <div class="grid-card__paragraph-and-image">
+                <p
+                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
+                >
+                  Playas de Rosarito B. C.
+                </p>
+                <button class="grid-card__button-like">
+                  <img
+                    src="./images/Group-heart.svg"
+                    alt="imagen me-gusta"
+                    class="grid-card__like-image"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <img
+                class="grid-card__image"
+                src="./images/la-rumorosa.JPG"
+                alt="Imagen la Rumorosa"
+              />
+              <div class="grid-card__paragraph-and-image">
+                <p
+                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
+                >
+                  La Rumorosa B. C.
+                </p>
+                <button class="grid-card__button-like">
+                  <img
+                    src="./images/Group-heart.svg"
+                    alt="imagen me-gusta"
+                    class="grid-card__like-image"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <img
+                class="grid-card__image"
+                src="./images/la-bufadora.JPG"
+                alt="Imagen la Bufadora"
+              />
+              <div class="grid-card__paragraph-and-image">
+                <p
+                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
+                >
+                  La Bufadora, Ensenada B. C.
+                </p>
+                <button class="grid-card__button-like">
+                  <img
+                    src="./images/Group-heart.svg"
+                    alt="imagen me-gusta"
+                    class="grid-card__like-image"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <img
+                class="grid-card__image"
                 src="./images/san-felipe.JPG"
-                alt="centro cultural Tijuana"
+                alt="Imaagen San Felipe"
               />
-              <div class="card-content__paragraph-and-image">
-                <p class="card-content__paragraph">San Felipe B.C.</p>
-                <button class="card-content__button-vector-like">
+              <div class="grid-card__paragraph-and-image">
+                <p
+                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
+                >
+                  San Felipe B. C.
+                </p>
+                <button class="grid-card__button-like">
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="card-content__vector-like-image"
+                    class="grid-card__like-image"
                   />
                 </button>
               </div>
-            </li>
+            </div>
 
-            <li class="card-content">
+            <div class="grid-card">
               <img
-                class="card-content__image"
+                class="grid-card__image"
                 src="./images/tecate.PNG"
-                alt="centro cultural Tijuana"
+                alt="Imagen Kiosco Tecate B. C."
               />
-              <div class="card-content__paragraph-and-image">
-                <p class="card-content__paragraph">Tecate B.C.</p>
-                <button class="card-content__button-vector-like">
+              <div class="grid-card__paragraph-and-image">
+                <p
+                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
+                >
+                  Tecate B. C.
+                </p>
+                <button class="grid-card__button-like">
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="card-content__vector-like-image"
+                    class="grid-card__like-image"
                   />
                 </button>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="footer">

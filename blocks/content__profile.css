@@ -1,0 +1,134 @@
+.content__profile {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* ------------------------------- */
+.content__profile-avatar {
+  display: flex;
+
+  width: 120px;
+  height: 120px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.content__profile-avatar-image {
+  display: flex;
+  width: 168.75px;
+  height: 127.5px;
+  position: absolute;
+  top: -3.75px;
+  left: -24.5px;
+  clip-path: circle(40%);
+}
+/* ------------------------------ */
+.content__profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 415px;
+  margin-left: 30px;
+}
+
+.content__profile-info-name {
+  font-family: "inter-Medium", sans-serif;
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.content__profile-info-edit-button {
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.content__profile-info-edit-button-image {
+  width: 24px;
+  height: 24px;
+}
+
+.content__profile-info-edit-button-image:hover {
+  opacity: 60%;
+}
+
+.content__profile-info-explorer {
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+}
+/* -------------------------------- */
+
+.content__profile-button-add {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px inset;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  margin: auto 0 auto auto;
+  padding: 0;
+  cursor: pointer;
+}
+
+.content__profile-button-add:hover {
+  opacity: 60%;
+}
+
+@media screen and (min-width: 641px) and (max-width: 920px) {
+  .content__profile {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content__profile {
+    max-width: 282px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .content__profile-avatar {
+    margin: 0 auto 30px;
+  }
+  /* ======================================== */
+  .content__profile-info {
+    width: 282px;
+    margin: 0 auto;
+
+    align-items: center;
+    padding-bottom: 36px;
+  }
+
+  /* ============================================ */
+  .content__profile-info-name {
+    font-family: "inter-Medium", sans-serif;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .content__profile-info-edit-button-image {
+    width: 18px;
+    height: 18px;
+  }
+
+  .content__profile-info-explorer {
+    font-size: 14px;
+    line-height: 1;
+  }
+  /* ======================================== */
+  .content__profile-button-add {
+    width: 282px;
+    margin: auto;
+    padding: 0;
+  }
+}
