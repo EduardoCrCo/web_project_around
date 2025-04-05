@@ -36,6 +36,10 @@
   right: -430px;
 }
 
+.popup__close-button:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
 .popup__body {
   background-color: #fff;
   border-radius: 10px;
@@ -80,8 +84,13 @@
   height: 50px;
   margin: 0 auto 36px;
   border: 0;
-  border: 2px solid #c4c4c4;
   color: #fff;
+  border-radius: 2px;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+  opacity: 80%;
 }
 /* ////////////////////////////////////////////////////////////// */
 @media screen and (max-width: 640px) {

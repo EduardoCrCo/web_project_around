@@ -36,7 +36,6 @@
 .profile-info__name-and-button {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
 .profile-info__name {
@@ -57,8 +56,6 @@
   background-color: transparent;
   width: 24px;
   height: 24px;
-  /* margin-left: 18px;
-  margin-top: 16px; */
   border: none;
   padding: 0;
   cursor: pointer;
