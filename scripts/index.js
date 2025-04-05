@@ -12,7 +12,7 @@ const popupProfile = document.querySelector(".popup_profile");
 const popupCloseButton = document.querySelector(".popup__close-button");
 
 const cardButtonLikeImage = document.querySelectorAll(
-  ".grid-card__button-image_active"
+  ".grid-card__button-like-image_active"
 );
 
 form.addEventListener("submit", function (event) {
@@ -36,6 +36,6 @@ popupCloseButton.addEventListener("click", function () {
 
 cardButtonLikeImage.forEach((button) => {
   button.addEventListener("click", function () {
-    button.classList.toggle("grid-card__button-like-image_active");
+    button.classList.toggle("grid-card__button-like_active");
   });
 });

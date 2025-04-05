@@ -18,9 +18,6 @@ El proyecto contiene:
 - FlexBox Para la ubicacion de los elementos de acuerdo al Diseño Figma
 - contiene las fuentes indicadas en el diseño
 
-<<<<<<< HEAD
-link: https://eduardocrco.github.io/web_project_around/
-=======
 link: https://eduardocrco.github.io/web_project_around/
 
 > > > > > > > 511b415400d7e220e5b4531f33095517a213af15
