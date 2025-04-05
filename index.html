@@ -22,28 +22,30 @@
       </header>
 
       <main class="content">
-        <section class="content__profile">
-          <div class="content__profile-avatar">
+        <section class="profile">
+          <div class="profile-avatar">
             <img
               src="./images/dji_author.jpg"
               alt="imagen del perfil"
-              class="content__profile-avatar-image"
+              class="profile-avatar__image"
             />
           </div>
-          <div class="content__profile-info">
-            <p class="content__profile-info-name">
-              Eduardo Crux
-              <button class="content__profile-info-edit-button">
+          <div class="profile-info">
+            <div class="profile-info__name-and-button">
+              <p class="profile-info__name profile-info__name_text_overflow">
+                Eduardo Crux
+              </p>
+              <button class="profile-info__edit-button">
                 <img
                   src="./images/edit-button.svg"
                   alt="boton de editar"
-                  class="content__profile-info-edit-button-image"
+                  class="profile-info__edit-button-image"
                 />
               </button>
-            </p>
-            <p class="content__profile-info-explorer">Explorador</p>
+            </div>
+            <p class="profile-info__about">Explorador</p>
           </div>
-          <button class="content__profile-button-add" type="button">🞣</button>
+          <button class="profile__add-button" type="button">🞣</button>
         </section>
 
         <section class="elements">
@@ -64,7 +66,7 @@
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="grid-card__like-image"
+                    class="grid-card__button-like-image grid-card__button-image_active"
                   />
                 </button>
               </div>
@@ -86,7 +88,7 @@
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="grid-card__like-image"
+                    class="grid-card__button-like-image grid-card__button-image_active"
                   />
                 </button>
               </div>
@@ -108,7 +110,7 @@
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="grid-card__like-image"
+                    class="grid-card__button-like-image grid-card__button-image_active"
                   />
                 </button>
               </div>
@@ -130,7 +132,7 @@
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="grid-card__like-image"
+                    class="grid-card__button-like-image grid-card__button-image_active"
                   />
                 </button>
               </div>
@@ -152,7 +154,7 @@
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="grid-card__like-image"
+                    class="grid-card__button-like-image grid-card__button-image_active"
                   />
                 </button>
               </div>
@@ -174,7 +176,7 @@
                   <img
                     src="./images/Group-heart.svg"
                     alt="imagen me-gusta"
-                    class="grid-card__like-image"
+                    class="grid-card__button-like-image grid-card__button-image_active"
                   />
                 </button>
               </div>
@@ -189,6 +191,34 @@
           </p>
         </div>
       </footer>
+      <div class="popup popup_profile">
+        <div class="popup__overlay"></div>
+        <div class="popup__content">
+          <button class="popup__close-button">X</button>
+          <div class="popup__body">
+            <form class="form">
+              <h3 class="edit-profile">Editar perfil</h3>
+              <input
+                id="inputName"
+                type="text"
+                name="name"
+                class="form__input form__input_name"
+                placeholder="Nombre"
+                required
+              />
+              <input
+                id="inputAbout"
+                type="text"
+                name="about"
+                class="form__input form__input_about"
+                placeholder="Acerca de mi"
+                required
+              />
+              <input type="submit" class="form__submit" value="Guardar" />
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
