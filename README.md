@@ -17,3 +17,5 @@ El proyecto contiene:
 - Metodolgia BEM para la implementacion de clases
 - FlexBox Para la ubicacion de los elementos de acuerdo al Diseño Figma
 - contiene las fuentes indicadas en el diseño
+
+link:  https://eduardocrco.github.io/web_project_around/
