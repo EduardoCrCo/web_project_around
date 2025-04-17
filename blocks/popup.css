@@ -78,6 +78,14 @@
   margin: 0 auto 18px;
 }
 
+.form__input_title {
+  margin: 0 auto;
+}
+
+.form__input_url-image {
+  margin: 0 auto 18px;
+}
+
 .form__submit {
   background-color: #000;
   width: 358px;
