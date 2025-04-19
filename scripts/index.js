@@ -3,7 +3,7 @@ const profileAbout = document.querySelector(".profile-info__about");
 const formInputName = document.querySelector(".form__input_name");
 const formInputAbout = document.querySelector(".form__input_about");
 
-const formProfile = document.querySelector(".form__profile");
+const formProfile = document.querySelector(".form_profile");
 const profileEditButton = document.querySelector(".profile-info__edit-button");
 const popupProfile = document.querySelector(".popup_profile");
 
@@ -41,7 +41,7 @@ const formInputTitle = document.querySelector(".form__input_title");
 const formInputImage = document.querySelector(".form__input_url-image");
 const elements = document.querySelector(".grid-card");
 
-const formPlace = document.querySelector(".form__place");
+const formPlace = document.querySelector(".form_place");
 const placeAddImageButton = document.querySelector(".profile__add-button");
 const popupPlace = document.querySelector(".popup_place");
 
