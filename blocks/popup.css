@@ -25,15 +25,16 @@
 .popup__content {
   z-index: 1;
 }
-/* ////////////////////////////////////////////////////////// */
+/* ---------------------------- */
 .popup__close-button {
   font-size: 40px;
   background-color: transparent;
   color: #fff;
   border: none;
   font-family: "Inter-Medium", Arial, Helvetica, sans-serif;
-  position: relative;
-  right: -430px;
+  position: absolute;
+  right: -40px;
+  top: -40px;
 }
 
 .popup__close-button:hover {
@@ -43,8 +44,26 @@
 .popup__body {
   background-color: #fff;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 75vw;
+  max-height: 75vh;
 }
-/* //////////////////////////////////////////////////////////// */
+
+.popup__body_image {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.popup__image {
+  border-radius: 10px;
+  object-fit: cover;
+  max-width: 816px;
+  max-height: 540px;
+}
+
+/* ----------------------------- */
 .form {
   display: flex;
   flex-direction: column;
@@ -100,14 +119,8 @@
   cursor: pointer;
   opacity: 80%;
 }
-/* ////////////////////////////////////////////////////////////// */
+/* ------------------------------------ */
 @media screen and (max-width: 640px) {
-  .popup__close-button {
-    position: relative;
-    right: -250px;
-    top: -13px;
-  }
-
   .form {
     max-width: 282px;
   }
@@ -141,5 +154,12 @@
   .form__submit {
     width: 238px;
     height: 46px;
+  }
+
+  .popup__image {
+    border-radius: 10px;
+    width: 240px;
+
+    height: 299px;
   }
 }

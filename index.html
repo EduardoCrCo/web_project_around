@@ -49,141 +49,10 @@
         </section>
 
         <section class="elements">
-          <div class="grid">
-            <div class="grid-card">
-              <img
-                class="grid-card__image"
-                src="./images/cecut-air.jpg"
-                alt="centro cultural Tijuana"
-              />
-              <div class="grid-card__paragraph-and-image">
-                <p
-                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
-                >
-                  Centro Cultural Tijuana
-                </p>
-                <button class="grid-card__button-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="grid-card__button-like-image grid-card__button-like-image_active"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <div class="grid-card">
-              <img
-                class="grid-card__image"
-                src="./images/muelle-rosarito.jpg"
-                alt="Imagen playas de Rosarito"
-              />
-              <div class="grid-card__paragraph-and-image">
-                <p
-                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
-                >
-                  Playas de Rosarito B. C.
-                </p>
-                <button class="grid-card__button-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="grid-card__button-like-image grid-card__button-like-image_active"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <div class="grid-card">
-              <img
-                class="grid-card__image"
-                src="./images/la-rumorosa.JPG"
-                alt="Imagen la Rumorosa"
-              />
-              <div class="grid-card__paragraph-and-image">
-                <p
-                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
-                >
-                  La Rumorosa B. C.
-                </p>
-                <button class="grid-card__button-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="grid-card__button-like-image grid-card__button-like-image_active"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <div class="grid-card">
-              <img
-                class="grid-card__image"
-                src="./images/la-bufadora.JPG"
-                alt="Imagen la Bufadora"
-              />
-              <div class="grid-card__paragraph-and-image">
-                <p
-                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
-                >
-                  La Bufadora, Ensenada B. C.
-                </p>
-                <button class="grid-card__button-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="grid-card__button-like-image grid-card__button-like-image_active"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <div class="grid-card">
-              <img
-                class="grid-card__image"
-                src="./images/san-felipe.JPG"
-                alt="Imaagen San Felipe"
-              />
-              <div class="grid-card__paragraph-and-image">
-                <p
-                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
-                >
-                  San Felipe B. C.
-                </p>
-                <button class="grid-card__button-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="grid-card__button-like-image grid-card__button-like-image_active"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <div class="grid-card">
-              <img
-                class="grid-card__image"
-                src="./images/tecate.PNG"
-                alt="Imagen Kiosco Tecate B. C."
-              />
-              <div class="grid-card__paragraph-and-image">
-                <p
-                  class="grid-card__paragraph grid-card__paragraph_text_overflow"
-                >
-                  Tecate B. C.
-                </p>
-                <button class="grid-card__button-like">
-                  <img
-                    src="./images/Group-heart.svg"
-                    alt="imagen me-gusta"
-                    class="grid-card__button-like-image grid-card__button-like-image_active"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
+          <div class="grid"></div>
         </section>
       </main>
+
       <footer class="footer">
         <div class="footer-footer">
           <p class="footer-footer__copyright">
@@ -191,11 +60,12 @@
           </p>
         </div>
       </footer>
+
       <div class="popup popup_profile">
         <div class="popup__overlay"></div>
         <div class="popup__content">
-          <button class="popup__close-button">X</button>
           <div class="popup__body">
+            <button class="popup__close-button">X</button>
             <form class="form form__profile">
               <h3 class="edit-profile">Editar perfil</h3>
               <input
@@ -223,8 +93,8 @@
       <div class="popup popup_place">
         <div class="popup__overlay"></div>
         <div class="popup__content">
-          <button class="popup__close-button">X</button>
           <div class="popup__body">
+            <button class="popup__close-button">X</button>
             <form class="form form__place">
               <h3 class="edit-profile">Nuevo Lugar</h3>
               <input
@@ -232,7 +102,7 @@
                 type="text"
                 name="Title"
                 class="form__input form__input_title"
-                placeholder="Title"
+                placeholder="Nombre del lugar"
                 required
               />
               <input
@@ -240,15 +110,49 @@
                 type="text"
                 name="url"
                 class="form__input form__input_url-image"
-                placeholder="Imagen URL"
+                placeholder="URL de la imagen"
                 required
               />
-              <input type="submit" class="form__submit" value="Guardar" />
+              <input type="submit" class="form__submit" value="Crear" />
             </form>
           </div>
         </div>
       </div>
+
+      <div class="popup popup_image">
+        <div class="popup__overlay"></div>
+        <div class="popup__content">
+          <div class="popup__body popup__body_image">
+            <button class="popup__close-button">X</button>
+            <img
+              class="popup__image"
+              src="https://webcamsdemexico.com/wp-content/uploads/2021/08/Baja-California.jpg"
+              alt="tijuana"
+            />
+            <p class="popup__title"></p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <template class="grid-card-template">
+      <div class="grid-card">
+        <button class="grid-card__button-trash"></button>
+        <img class="grid-card__image" src="" alt="" />
+        <div class="grid-card__paragraph-and-image">
+          <p
+            class="grid-card__paragraph grid-card__paragraph_text_overflow"
+          ></p>
+          <button class="grid-card__button-like">
+            <img
+              src="./images/Group-heart.svg"
+              alt="imagen me-gusta"
+              class="grid-card__button-like-image grid-card__button-like-image_active"
+            />
+          </button>
+        </div>
+      </div>
+    </template>
 
     <script src="./scripts/index.js"></script>
   </body>
