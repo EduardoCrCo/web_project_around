@@ -21,3 +21,13 @@ El proyecto contiene:
 link: https://eduardocrco.github.io/web_project_around/
 
 > > > > > > > 511b415400d7e220e5b4531f33095517a213af15
+
+------------------------ sprint 8 --------------------
+se ha mejorado el proyecto agregando interactividad y de acuerdo al diseño de Figma
+
+- se habilito el formulario que permite agregar nuevos lugares
+- se habilitaron los botones de las tarjetas: boton like y boton de sesto de basura
+- se habilitaron las imagenes de las tarjetas para que al hacer click se expandan las imagenes
+
+- se agrego el marcado html para los popupsy el template
+- se ha utilizado javaScript para implementar el codigo mediante funciones, metodos, eventos, la declaracion de variables necesarias para hacer conectar las partes y que la pagina funcione de manera eficiente
