@@ -9,9 +9,9 @@ const popupProfile = document.querySelector(".popup_profile");
 
 const popupCloseButton = document.querySelectorAll(".popup__close-button");
 
-const cardButtonLikeImage = document.querySelectorAll(
-  ".grid-card__button-like-image_active"
-);
+profileEditButton.addEventListener("click", function () {
+  popupProfile.classList.add("popup_opened");
+});
 
 formProfile.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -25,29 +25,15 @@ formProfile.addEventListener("submit", function (event) {
   }
 });
 
-profileEditButton.addEventListener("click", function () {
-  popupProfile.classList.add("popup_opened");
-});
-
+const cardButtonLikeImage = document.querySelectorAll(
+  ".grid-card__button-like-image_active"
+);
 cardButtonLikeImage.forEach((button) => {
   button.addEventListener("click", function () {
     button.classList.toggle("grid-card__button-like_active");
   });
 });
-
-const cardTitle = document.querySelector(".grid-card__paragraph");
-const cardImage = document.querySelector(".grid-card__image");
-const formInputTitle = document.querySelector(".form__input_title");
-const formInputImage = document.querySelector(".form__input_url-image");
-const elements = document.querySelector(".grid-card");
-
-const formPlace = document.querySelector(".form_place");
-const placeAddImageButton = document.querySelector(".profile__add-button");
-const popupPlace = document.querySelector(".popup_place");
-
-const popupImage = document.querySelector(".popup_image");
-const popupImageCloseButton = popupImage.querySelector(".popup__close-button");
-
+// -----------------------------------------------------------------------------
 const places = [
   {
     src: "./images/cecut-air.jpg",
@@ -81,18 +67,31 @@ const places = [
   },
 ];
 
+const gridContainer = document.querySelector(".grid");
+places.forEach((place) => {
+  const card = createElement(place.description, place.src);
+  gridContainer.prepend(card);
+});
+// -----------------------------------------------------------------------------
+const cardImage = document.querySelector(".grid-card__image");
+const cardTitle = document.querySelector(".grid-card__paragraph");
+const formInputImage = document.querySelector(".form__input_url-image");
+const formInputTitle = document.querySelector(".form__input_title");
+
+const elements = document.querySelector(".grid-card");
+
+const formPlace = document.querySelector(".form_place");
+const placeAddImageButton = document.querySelector(".profile__add-button");
+const popupPlace = document.querySelector(".popup_place");
+
+const popupImage = document.querySelector(".popup_image");
+const popupImageCloseButton = popupImage.querySelector(".popup__close-button");
+
 placeAddImageButton.addEventListener("click", function () {
   popupPlace.classList.add("popup_opened");
 });
 
-popupCloseButton.forEach((button) => {
-  button.addEventListener("click", function () {
-    popupProfile.classList.remove("popup_opened");
-    popupPlace.classList.remove("popup_opened");
-    popupImage.classList.remove("popup_opened");
-  });
-});
-
+// -----------------------------------------------------------------------------
 function createElement(name, link) {
   const cardNode = document
     .querySelector(".grid-card-template")
@@ -123,12 +122,6 @@ function createElement(name, link) {
   return cardNode;
 }
 
-const gridContainer = document.querySelector(".grid");
-places.forEach((place) => {
-  const card = createElement(place.description, place.src);
-  gridContainer.prepend(card);
-});
-
 formPlace.addEventListener("submit", function (event) {
   event.preventDefault();
   if (formInputTitle.value !== "" && formInputImage.value !== "") {
@@ -139,4 +132,12 @@ formPlace.addEventListener("submit", function (event) {
   } else {
     alert("El campo tiene que ser obligatorio");
   }
+});
+
+popupCloseButton.forEach((button) => {
+  button.addEventListener("click", function () {
+    popupProfile.classList.remove("popup_opened");
+    popupPlace.classList.remove("popup_opened");
+    popupImage.classList.remove("popup_opened");
+  });
 });
