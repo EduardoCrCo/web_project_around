@@ -1,7 +1,7 @@
 const profileName = document.querySelector(".profile-info__name");
 const profileAbout = document.querySelector(".profile-info__about");
-const formInputName = document.querySelector(".form__input_name");
-const formInputAbout = document.querySelector(".form__input_about");
+const formInputName = document.querySelector(".form__input-name");
+const formInputAbout = document.querySelector(".form__input-about");
 
 const formProfile = document.querySelector(".form_profile");
 const profileEditButton = document.querySelector(".profile-info__edit-button");
@@ -20,19 +20,9 @@ formProfile.addEventListener("submit", function (event) {
     profileAbout.textContent = formInputAbout.value;
     formProfile.reset();
     popupProfile.classList.remove("popup_opened");
-  } else {
-    alert("el campo tiene que ser obligatorio");
   }
 });
 
-const cardButtonLikeImage = document.querySelectorAll(
-  ".grid-card__button-like-image_active"
-);
-cardButtonLikeImage.forEach((button) => {
-  button.addEventListener("click", function () {
-    button.classList.toggle("grid-card__button-like_active");
-  });
-});
 // -----------------------------------------------------------------------------
 const places = [
   {
@@ -129,8 +119,6 @@ formPlace.addEventListener("submit", function (event) {
     gridContainer.prepend(card);
     formPlace.reset();
     popupPlace.classList.remove("popup_opened");
-  } else {
-    alert("El campo tiene que ser obligatorio");
   }
 });
 
@@ -140,4 +128,19 @@ popupCloseButton.forEach((button) => {
     popupPlace.classList.remove("popup_opened");
     popupImage.classList.remove("popup_opened");
   });
+});
+
+const popupOverlays = document.querySelectorAll(".popup__overlay");
+popupOverlays.forEach(function (overlay) {
+  overlay.addEventListener("click", function () {
+    const popup = overlay.closest(".popup");
+    popup.classList.remove("popup_opened");
+  });
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    const popup = document.querySelector(".popup_opened");
+    popup.classList.remove("popup_opened");
+  }
 });

@@ -29,5 +29,18 @@ se ha mejorado el proyecto agregando interactividad y de acuerdo al diseño de F
 - se habilitaron los botones de las tarjetas: boton like y boton de sesto de basura
 - se habilitaron las imagenes de las tarjetas para que al hacer click se expandan las imagenes
 
-- se agrego el marcado html para los popupsy el template
+- se agrego el marcado html para los popups y el template
 - se ha utilizado javaScript para implementar el codigo mediante funciones, metodos, eventos, la declaracion de variables necesarias para hacer conectar las partes y que la pagina funcione de manera eficiente
+
+------------------------ sprint 9 --------------------
+nuevas caracteristicas se han implementado en el proyecto: web_project_around
+
+- los campos de entrada de los formularios se validan mediante javaScript utilizando el objeto validityState que comprueba si los datos cumplen los requisitos que marca el HTML, y llama a la funsion que muestra los mensajes de error si no son validos, y si son validos llama a la funcion que oculta los mensajes de error.
+
+- mediante la funcion hasInvalidInput() itera la lista de los campos de entrada de los formularios y localiza si alguno es invalido y lo devuelve.
+
+- para que mediante la funcion toggleButtonState() si almenos un input de los formularios no esta validado el boton de enviar continue desactivado, o si todos los input pasaron las validaciones se active el boton sumbit
+
+- con la funcion setEventListeners() obtenemos un array con todos los input y, cada input le activamos el evento input y llamamos a la funcion checkInputValidity para que revise si se cumplen las validaciones.
+
+- a la funcion enableValidation() le pasamos como argumento el objeto configForm que contiene las configuraciones de los selctores de clase y los nombres de clase, para hacer mas dinámico el código.

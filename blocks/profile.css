@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
 }
-/* ------------------------------- */
+/* ----------------------------------------- */
 .profile-avatar {
   display: flex;
 
@@ -24,7 +24,7 @@
   left: -24.5px;
   clip-path: circle(40%);
 }
-/* ------------------------------- */
+/* ----------------------------------------- */
 .profile-info {
   display: flex;
   flex-direction: column;
@@ -113,7 +113,7 @@
   .profile-avatar {
     margin: 0 auto 30px;
   }
-  /* ==========================================*/
+  /* ------------------------------------------- */
   .profile-info {
     width: 282px;
     margin: 0 auto;
@@ -122,7 +122,7 @@
     padding-bottom: 36px;
   }
 
-  /* ========================================== */
+  /* ------------------------------------------- */
   .profile-info__name-and-button {
     width: 224px;
     display: flex;
@@ -146,7 +146,7 @@
     font-size: 14px;
     line-height: 1;
   }
-  /* ========================================= */
+  /* ------------------------------------------- */
   .profile__add-button {
     width: 282px;
     margin: auto;
