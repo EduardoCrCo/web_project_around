@@ -108,7 +108,7 @@
 .form__input-error_active {
   width: 358px;
   color: red;
-  font-size: 12px;
+  font-size: 11px;
   margin: 0 auto;
 }
 
@@ -193,5 +193,9 @@ button:disabled {
     width: 240px;
 
     height: 299px;
+  }
+
+  .form__input-error_active {
+    width: 238px;
   }
 }
