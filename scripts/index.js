@@ -1,16 +1,35 @@
-const profileName = document.querySelector(".profile-info__name");
-const profileAbout = document.querySelector(".profile-info__about");
-const formInputName = document.querySelector(".form__input-name");
-const formInputAbout = document.querySelector(".form__input-about");
+import Card from "../components/Card.js";
+import {
+  places,
+  gridContainer,
+  createElement,
+  profileEditButton,
+  placeAddImageButton,
+  openPopup,
+  popupProfile,
+  popupPlace,
+  formPlace,
+  formInputTitle,
+  formInputImage,
+  formProfile,
+  profileName,
+  profileAbout,
+  formInputName,
+  formInputAbout,
+  configForm,
+} from "../utils/utils.js";
+import FormValidator from "../components/FormValidator.js";
 
-const formProfile = document.querySelector(".form_profile");
-const profileEditButton = document.querySelector(".profile-info__edit-button");
-const popupProfile = document.querySelector(".popup_profile");
+places.forEach((place) => {
+  gridContainer.prepend(createElement(place.name, place.link));
+});
 
-const popupCloseButton = document.querySelectorAll(".popup__close-button");
+profileEditButton.addEventListener("click", () => {
+  openPopup(popupProfile);
+});
 
-profileEditButton.addEventListener("click", function () {
-  popupProfile.classList.add("popup_opened");
+placeAddImageButton.addEventListener("click", () => {
+  openPopup(popupPlace);
 });
 
 formProfile.addEventListener("submit", function (event) {
@@ -23,96 +42,7 @@ formProfile.addEventListener("submit", function (event) {
   }
 });
 
-// -----------------------------------------------------------------------------
-const places = [
-  {
-    src: "./images/cecut-air.jpg",
-    alt: "centro cultural Tijuana",
-    description: "Centro Cultural Tijuana",
-  },
-  {
-    src: "./images/muelle-rosarito.jpg",
-    alt: "Imagen playas de Rosarito",
-    description: "Playas de Rosarito B. C.",
-  },
-  {
-    src: "./images/la-rumorosa.JPG",
-    alt: "Imagen la Rumorosa",
-    description: "La Rumorosa B. C.",
-  },
-  {
-    src: "./images/la-bufadora.JPG",
-    alt: "Imagen la Bufadora",
-    description: "La Bufadora, Ensenada B. C.",
-  },
-  {
-    src: "./images/san-felipe.JPG",
-    alt: "Imagen San Felipe",
-    description: "San Felipe B. C.",
-  },
-  {
-    src: "./images/tecate.PNG",
-    alt: "Imagen Tecate",
-    description: "Tecate B. C.",
-  },
-];
-
-const gridContainer = document.querySelector(".grid");
-places.forEach((place) => {
-  const card = createElement(place.description, place.src);
-  gridContainer.prepend(card);
-});
-// -----------------------------------------------------------------------------
-const cardImage = document.querySelector(".grid-card__image");
-const cardTitle = document.querySelector(".grid-card__paragraph");
-const formInputImage = document.querySelector(".form__input_url-image");
-const formInputTitle = document.querySelector(".form__input_title");
-
-const elements = document.querySelector(".grid-card");
-
-const formPlace = document.querySelector(".form_place");
-const placeAddImageButton = document.querySelector(".profile__add-button");
-const popupPlace = document.querySelector(".popup_place");
-
-const popupImage = document.querySelector(".popup_image");
-const popupImageCloseButton = popupImage.querySelector(".popup__close-button");
-
-placeAddImageButton.addEventListener("click", function () {
-  popupPlace.classList.add("popup_opened");
-});
-
-// -----------------------------------------------------------------------------
-function createElement(name, link) {
-  const cardNode = document
-    .querySelector(".grid-card-template")
-    .content.querySelector(".grid-card")
-    .cloneNode(true);
-
-  cardNode.querySelector(".grid-card__image").src = link;
-  cardNode.querySelector(".grid-card__image").alt = name;
-  cardNode.querySelector(".grid-card__paragraph").textContent = name;
-
-  const likeButton = cardNode.querySelector(".grid-card__button-like-image");
-  likeButton.addEventListener("click", function () {
-    likeButton.classList.toggle("grid-card__button-like_active");
-  });
-
-  const trashButton = cardNode.querySelector(".grid-card__button-trash");
-  trashButton.addEventListener("click", function () {
-    cardNode.remove(".grid-card__button-trash");
-  });
-
-  const Image = cardNode.querySelector(".grid-card__image");
-  Image.addEventListener("click", function () {
-    popupImage.classList.add("popup_opened");
-    popupImage.querySelector(".popup__image").src = link;
-    popupImage.querySelector(".popup__image").alt = name;
-    popupImage.querySelector(".popup__title").textContent = name;
-  });
-  return cardNode;
-}
-
-formPlace.addEventListener("submit", function (event) {
+formPlace.addEventListener("submit", (event) => {
   event.preventDefault();
   if (formInputTitle.value !== "" && formInputImage.value !== "") {
     const card = createElement(formInputTitle.value, formInputImage.value);
@@ -122,25 +52,8 @@ formPlace.addEventListener("submit", function (event) {
   }
 });
 
-popupCloseButton.forEach((button) => {
-  button.addEventListener("click", function () {
-    popupProfile.classList.remove("popup_opened");
-    popupPlace.classList.remove("popup_opened");
-    popupImage.classList.remove("popup_opened");
-  });
-});
+const formValidatorProfile = new FormValidator(formProfile, configForm);
+formValidatorProfile.enableValidation();
 
-const popupOverlays = document.querySelectorAll(".popup__overlay");
-popupOverlays.forEach(function (overlay) {
-  overlay.addEventListener("click", function () {
-    const popup = overlay.closest(".popup");
-    popup.classList.remove("popup_opened");
-  });
-});
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    const popup = document.querySelector(".popup_opened");
-    popup.classList.remove("popup_opened");
-  }
-});
+const formValidatorPlace = new FormValidator(formPlace, configForm);
+formValidatorPlace.enableValidation();

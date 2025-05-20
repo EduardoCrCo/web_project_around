@@ -41,6 +41,19 @@ nuevas caracteristicas se han implementado en el proyecto: web_project_around
 
 - para que mediante la funcion toggleButtonState() si almenos un input de los formularios no esta validado el boton de enviar continue desactivado, o si todos los input pasaron las validaciones se active el boton sumbit
 
-- con la funcion setEventListeners() obtenemos un array con todos los input y, cada input le activamos el evento input y llamamos a la funcion checkInputValidity para que revise si se cumplen las validaciones.
+- con la funcion setEventListeners() obtenemos un array con todos los input y, a cada input le activamos el evento input y llamamos a la funcion checkInputValidity para que revise si se cumplen las validaciones.
 
-- a la funcion enableValidation() le pasamos como argumento el objeto configForm que contiene las configuraciones de los selctores de clase y los nombres de clase, para hacer mas dinámico el código.
+- a la funcion enableValidation() le pasamos como argumento el objeto configForm que contiene las configuraciones de los selectores de clase y los nombres de clase, para hacer mas dinámico el código.
+
+---------------------- sprint 10 ------------------------
+
+se aplicó refactorización al codigo javaScript del proyecto Web_project_around utilizando el paradigma de POO (programacion orientada a objetos)
+
+siguiendo los lineamientos del brief:
+
+- creacion de las clases Card y FormValidator
+  que contienen los datos y los metodos nesesarios para que sean totalmente funcionales
+
+- utils.js contiene los controladores de eventos y las funciónes que abren y cierra los popups.
+
+link: https://eduardocrco.github.io/web_project_around/
