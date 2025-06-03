@@ -1,4 +1,5 @@
 {
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "workbench.colorCustomizations": {}
+  "workbench.colorTheme": "Monokai",
+  "workbench.colorCustomizations": {},
+  "liveServer.settings.port": 5501
 }

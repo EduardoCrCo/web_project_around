@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alrededor de Baja California</title>
+    <title>Alrededor de Baja California 11</title>
     <meta name="description" content="Alrededor de México" />
     <meta name="author" content="Eduardo Cruz" />
     <meta name="keywords" content="html, css, javascript" />
@@ -43,7 +43,9 @@
                 />
               </button>
             </div>
-            <p class="profile-info__about">Explorador</p>
+            <p class="profile-info__about profile-info__about_text_overflow">
+              Explorador
+            </p>
           </div>
           <button class="profile__add-button" type="button">
             <img
@@ -115,7 +117,7 @@
                 <input
                   id="inputTitle"
                   type="text"
-                  name="Title"
+                  name="name"
                   class="form__input form__input_title"
                   placeholder="Titulo"
                   required
@@ -126,7 +128,7 @@
                 <input
                   id="inputImageUrl"
                   type="url"
-                  name="url"
+                  name="link"
                   class="form__input form__input_url-image"
                   placeholder="URL de la imagen"
                   required
@@ -164,7 +166,7 @@
             alt="bote de basura"
           />
         </button>
-        <img class="grid-card__image" src=" " alt=" " />
+        <img class="grid-card__image" src="" alt="" />
         <div class="grid-card__paragraph-and-image">
           <p
             class="grid-card__paragraph grid-card__paragraph_text_overflow"
@@ -181,6 +183,7 @@
     </template>
 
     <script type="module" src="./scripts/index.js"></script>
-    <script type="module" src="./scripts/validate.js"></script>
+    <!-- <script type="module" src="./components/Popup.js"></script> -->
+    <!-- <script type="module" src="./components/PopupWithImage.js"></script> -->
   </body>
 </html>

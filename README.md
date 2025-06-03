@@ -57,3 +57,26 @@ siguiendo los lineamientos del brief:
 - utils.js contiene los controladores de eventos y las funciónes que abren y cierra los popups.
 
 link: https://eduardocrco.github.io/web_project_around/
+
+---------------------------sprint 11------------------------------
+
+De acuerdo al brief del sprint 11 el proyecto cuenta todas las implementaciones
+
+Se crearonn las clases correspondientes con sus respectivos componentes
+
+- clase Section: obtiene los elementos, los renderiza y los coloca en su contenedor correspondiente
+
+- clase Popup:
+  contiene el metodo EscapeHandler para cerrar los popup con la tecla Escape
+  contiene el metodo \_setEventListeners que agrega los detectores de click en el boton de cerrar y en el Overlay de cada ventana modal
+
+- clase PopupWithImage:
+  modifica el metodo padre open(), para que pueda añadir una image y un titulo al popup de Imagen.
+
+- clase PopupWithForm:
+  obtiene los datos de los inputs con el metodo \_getInputValues().
+  modifica al metodo padre \_setEventListeners para agragar el evento submit al formulario y previene la recarga por defecto.
+
+- clase UserInfo:
+  obtiene el nombre y el about del usuario con el metodo getUserInfo()
+  el metodo setUserInfo toma esosm datos y los agrega a la pagina.

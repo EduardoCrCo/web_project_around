@@ -1,56 +1,50 @@
-import Card from "../components/Card.js";
 import {
   places,
   gridContainer,
   createElement,
   profileEditButton,
   placeAddImageButton,
-  openPopup,
-  popupProfile,
-  popupPlace,
   formPlace,
-  formInputTitle,
-  formInputImage,
   formProfile,
   profileName,
   profileAbout,
-  formInputName,
-  formInputAbout,
   configForm,
 } from "../utils/utils.js";
 import FormValidator from "../components/FormValidator.js";
+import Section from "../components/Section.js";
+import PopupWithForm from "../components/PopupWithForm.js";
 
-places.forEach((place) => {
-  gridContainer.prepend(createElement(place.name, place.link));
-});
+const sectionCards = new Section(
+  places,
+  (place) => {
+    return createElement(place.name, place.link);
+  },
+  ".grid"
+);
+sectionCards.renderItems();
 
 profileEditButton.addEventListener("click", () => {
-  openPopup(popupProfile);
+  popupAddProfile.open();
 });
-
+//--------------------------------------------------
 placeAddImageButton.addEventListener("click", () => {
-  openPopup(popupPlace);
+  popupAddCard.open();
 });
 
-formProfile.addEventListener("submit", function (event) {
-  event.preventDefault();
-  if (formInputName.value !== "" && formInputAbout.value !== "") {
-    profileName.textContent = formInputName.value;
-    profileAbout.textContent = formInputAbout.value;
-    formProfile.reset();
-    popupProfile.classList.remove("popup_opened");
-  }
+const popupAddCard = new PopupWithForm(".popup_place", ({ name, link }) => {
+  const newCard = createElement(name, link);
+  gridContainer.prepend(newCard);
+  popupAddCard.close();
 });
 
-formPlace.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (formInputTitle.value !== "" && formInputImage.value !== "") {
-    const card = createElement(formInputTitle.value, formInputImage.value);
-    gridContainer.prepend(card);
-    formPlace.reset();
-    popupPlace.classList.remove("popup_opened");
+const popupAddProfile = new PopupWithForm(
+  ".popup_profile",
+  ({ name, about }) => {
+    profileName.textContent = name;
+    profileAbout.textContent = about;
+    popupAddProfile.close();
   }
-});
+);
 
 const formValidatorProfile = new FormValidator(formProfile, configForm);
 formValidatorProfile.enableValidation();
