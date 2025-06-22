@@ -11,7 +11,7 @@ export default class UserInfo {
     };
   }
 
-  setUserInfor(name, about) {
+  setUserInfo(name, about) {
     this._nameNode.textContent = name;
     this._aboutNode.textContent = about;
   }

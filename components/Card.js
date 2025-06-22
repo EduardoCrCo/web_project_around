@@ -1,9 +1,17 @@
+import { handleDeleteClick } from "../utils/utils.js";
+
 export default class Card {
-  constructor(name, link, templateSelector, { handleCardImageClick }) {
+  constructor(
+    name,
+    link,
+    templateSelector,
+    { handleCardImageClick, handleDeleteClick }
+  ) {
     this._name = name;
     this._link = link;
     this._handleCardImageClick = handleCardImageClick;
     this._templateSelector = templateSelector;
+    this._handleDeleteClick = handleDeleteClick;
   }
   //--------------------------------
   _getTemplate() {
@@ -36,10 +44,11 @@ export default class Card {
     });
 
     trashButton.addEventListener("click", () => {
-      this.remove();
+      this._handleDeleteClick(this);
     });
   }
 
+  //-----------------------------
   clickCard() {
     this._handleCardImageClick(this._name, this._link);
   }
@@ -51,6 +60,7 @@ export default class Card {
   }
   remove() {
     this._element.remove();
+    this._element = null;
   }
 
   render() {

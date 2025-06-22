@@ -170,7 +170,7 @@ button:disabled {
     background-color: transparent;
     width: 238px;
     height: 26px;
-    color: #c4c4c4;
+    color: #000;
     border: 0;
     border-bottom: 2px solid #c4c4c4;
   }

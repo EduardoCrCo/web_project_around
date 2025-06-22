@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alrededor de Baja California 11</title>
+    <title>Alrededor de Baja California 12</title>
     <meta name="description" content="Alrededor de México" />
     <meta name="author" content="Eduardo Cruz" />
     <meta name="keywords" content="html, css, javascript" />
@@ -28,6 +28,11 @@
               src="./images/dji_author.jpg"
               alt="imagen del perfil"
               class="profile-avatar__image"
+            />
+            <img
+              src="./images/Vector_edit_profile.svg"
+              alt="icono de editar"
+              class="profile-avatar__edit_icon"
             />
           </div>
           <div class="profile-info">
@@ -78,18 +83,18 @@
               <h3 class="edit-profile">Editar perfil</h3>
               <fieldset class="form__fieldset">
                 <input
-                  id="input-name"
                   type="text"
                   name="name"
+                  id="input-name"
                   class="form__input form__input-name"
                   placeholder="Nombre"
-                  required
                   minlength="2"
                   maxlength="40"
+                  required
                 />
                 <span class="input-name-error"></span>
                 <input
-                  id="inputAbout"
+                  id="input-About"
                   type="text"
                   name="about"
                   class="form__input form__input-about"
@@ -98,8 +103,30 @@
                   minlength="2"
                   maxlength="200"
                 />
-                <span class="inputAbout-error"></span>
+                <span class="input-About-error"></span>
               </fieldset>
+              <button type="submit" class="form__submit">Guardar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup popup_avatar">
+        <div class="popup__overlay"></div>
+        <div class="popup__content">
+          <div class="popup__body">
+            <button class="popup__close-button">X</button>
+            <form class="form form_avatar" novalidate>
+              <h3 class="edit-profile">Cambiar foto de perfil</h3>
+              <input
+                id="inputImageUrl"
+                type="url"
+                name="link"
+                class="form__input form__input_url-image"
+                placeholder="URL de la imagen"
+                required
+              />
+              <span class="inputImageUrl-error"></span>
               <button type="submit" class="form__submit">Guardar</button>
             </form>
           </div>
@@ -136,6 +163,19 @@
                 <span class="inputImageUrl-error"></span>
               </fieldset>
               <button type="submit" class="form__submit">Crear</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup popup_remove-place">
+        <div class="popup__overlay"></div>
+        <div class="popup__content">
+          <div class="popup__body">
+            <button class="popup__close-button">X</button>
+            <form class="form form_remove" novalidate>
+              <h3 class="edit-profile">¿Estás seguro/a?</h3>
+              <button type="submit" class="form__submit">Sí</button>
             </form>
           </div>
         </div>
@@ -183,7 +223,5 @@
     </template>
 
     <script type="module" src="./scripts/index.js"></script>
-    <!-- <script type="module" src="./components/Popup.js"></script> -->
-    <!-- <script type="module" src="./components/PopupWithImage.js"></script> -->
   </body>
 </html>

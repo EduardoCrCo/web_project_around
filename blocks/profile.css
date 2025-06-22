@@ -23,7 +23,27 @@
   top: -3.75px;
   left: -24.5px;
   clip-path: circle(40%);
+  object-fit: contain;
 }
+
+.profile-avatar:hover .profile-avatar__image {
+  opacity: 0.6;
+}
+
+.profile-avatar__edit_icon {
+  position: absolute;
+  top: 47px;
+  right: 47px;
+  width: 26px;
+  height: 26px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.profile-avatar:hover .profile-avatar__edit_icon {
+  opacity: 1;
+}
+
 /* ----------------------------------------- */
 .profile-info {
   display: flex;
@@ -142,6 +162,12 @@
     /* margin-right: 10px; */
   }
 
+  .profile-info__name_text_overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
   .profile-info__edit-button-image {
     width: 18px;
     height: 18px;
@@ -151,6 +177,12 @@
   .profile-info__about {
     font-size: 14px;
     line-height: 1;
+  }
+
+  .profile-info__about_text_overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   /* ------------------------------------------- */
   .profile__add-button {
