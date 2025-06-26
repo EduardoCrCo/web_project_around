@@ -80,3 +80,30 @@ Se crearonn las clases correspondientes con sus respectivos componentes
 - clase UserInfo:
   obtiene el nombre y el about del usuario con el metodo getUserInfo()
   el metodo setUserInfo toma esosm datos y los agrega a la pagina.
+
+---------------------------sprint 12------------------------------
+
+En el proyecto del sprint 12 se implemento la conexión con el servidor, para hacer las solicitudes correspondientes al brief
+
+- Cargar la información del usuario desde el servidor.
+- Cargar las tarjetas desde el servidor.
+- Editar datos del perfil de usuario y que los datos se guarden en el servidor.
+- Agregar una nueva tarjeta.
+- Eliminar una tarjeta.
+- Añadir y eliminar likes, como alternar el estado del boton.
+- Actualizar la foto del perfil (avatar).
+- Se mejoró la UX para notificar al usuario que sus acciones estan en proceso mostrando el texto "Guardando..." cuando preciona el boton submit(guardar, crear) en cada formulario.
+
+- todos los metodos para las solicitudes esta implemetados dentro de la clase Api en el archivo Api.js y son llamados en index.js para manejar la logica de la aplicacion y interaccion del usuario.
+
+- api.getAppInfo() se llama para obtener la información del usuario y las tarjetas.
+- api.updateUser(name, about) se llama al editar el perfil.
+- api.addCard(name, link) se llama al agregar una tarjeta.
+- api.deleteCard(cardId) se llama al eliminar una tarjeta.
+- api.likeCard(cardId) y api.deleteLikeCard(cardId) se llaman para dar y quitar likes.
+- api.updateAvatar(link) se llama para actualizar el avatar.
+
+tambien se agrego
+
+- popup para actualizar la foto del perfil.
+- popup de confirmacion para eliminar una tarjeta.

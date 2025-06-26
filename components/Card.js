@@ -1,17 +1,16 @@
-import { handleDeleteClick } from "../utils/utils.js";
-
 export default class Card {
   constructor(
     name,
     link,
     templateSelector,
-    { handleCardImageClick, handleDeleteClick }
+    { handleCardImageClick, handleDeleteClick, handleLikeClick }
   ) {
     this._name = name;
     this._link = link;
     this._handleCardImageClick = handleCardImageClick;
     this._templateSelector = templateSelector;
     this._handleDeleteClick = handleDeleteClick;
+    this._handleLikeClick = handleLikeClick;
   }
   //--------------------------------
   _getTemplate() {
@@ -36,11 +35,16 @@ export default class Card {
     );
     const trashButton = this._element.querySelector(".grid-card__button-trash");
 
+    if (this._ownerId !== this._currentUserId && trashButton) {
+      trashButton.style.display = "none";
+    }
     cardImage.addEventListener("click", () => {
       this.clickCard();
     });
     likeButton.addEventListener("click", () => {
-      this.toggleLike();
+      if (this._handleLikeClick) {
+        this._handleLikeClick(this);
+      }
     });
 
     trashButton.addEventListener("click", () => {
@@ -52,12 +56,18 @@ export default class Card {
   clickCard() {
     this._handleCardImageClick(this._name, this._link);
   }
-  toggleLike() {
+
+  updateLikes(isLiked) {
     const likeButton = this._element.querySelector(
       ".grid-card__button-like-image"
     );
-    likeButton.classList.toggle("grid-card__button-like_active");
+    if (isLiked) {
+      likeButton.classList.add("grid-card__button-like_active");
+    } else {
+      likeButton.classList.remove("grid-card__button-like_active");
+    }
   }
+
   remove() {
     this._element.remove();
     this._element = null;
