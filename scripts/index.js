@@ -54,7 +54,6 @@ const sectionCards = new Section(
           api
             .likeCard(cardInstance._id)
             .then((updatedCard) => {
-              console.log("Estado de like recibido:", updatedCard.isLiked);
               cardInstance.updateLikes(updatedCard.isLiked);
               cardInstance._isLiked = updatedCard.isLiked;
             })

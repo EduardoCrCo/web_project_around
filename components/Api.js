@@ -52,7 +52,6 @@ class Api {
       config["body"] = JSON.stringify(body);
     }
     return fetch(`${this._url}${path}`, config).then(async (res) => {
-      console.log(res);
       if (res.ok) {
         return res.json();
       }
